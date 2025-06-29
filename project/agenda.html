@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA Soluções - Agenda de Serviços</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo" onclick="window.location.href='index.html'">
+            <div class="logo-image">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div class="status-indicator"></div>
+            </div>
+            <div class="logo-text">
+              <h1>CA Soluções</h1>
+              <p>⚡ Especialistas em Elétrica</p>
+            </div>
+          </div>
+
+          <nav class="nav-desktop">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="servicos.html" class="nav-link">Serviços</a>
+            <a href="agenda.html" class="nav-link active">Agenda</a>
+            <a href="orcamento.html" class="nav-link">Orçamento</a>
+            <a href="galeria.html" class="nav-link">Galeria</a>
+            <a href="sobre.html" class="nav-link">Sobre Nós</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+          </nav>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="servicos.html" class="mobile-nav-link">Serviços</a>
+          <a href="agenda.html" class="mobile-nav-link">Agenda</a>
+          <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+          <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+          <a href="sobre.html" class="mobile-nav-link">Sobre Nós</a>
+          <a href="contato.html" class="mobile-nav-link">Contato</a>
+          <a
+            href="https://wa.me/5527992472266?text=Olá! Preciso de ajuda com um serviço urgente."
+            target="_blank"
+            class="mobile-whatsapp"
+          >
+            📞 WhatsApp 24h
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">📅</div>
+            <span>AGENDE SEU SERVIÇO</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">NOSSA</span>
+            <span class="title-line gradient">AGENDA</span>
+          </h1>
+
+          <p class="hero-description">
+            Escolha o melhor horário para você! Veja nossa disponibilidade em
+            tempo real e agende seu serviço de forma prática e rápida.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Agenda de Horários</h2>
+          <p>Selecione a data e horário de sua preferência</p>
+        </div>
+
+        <!-- Layout Mobile-First (Empilhado) -->
+        <div class="agenda-layout">
+          <!-- Calendar -->
+          <div class="agenda-calendar">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-bottom: 32px;
+              "
+            >
+              <div
+                style="
+                  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+                  color: white;
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 12px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 24px;
+                "
+              >
+                📅
+              </div>
+              <h3
+                style="
+                  font-size: 24px;
+                  font-weight: 700;
+                  color: #1f2937;
+                  margin: 0;
+                "
+              >
+                Selecione uma Data
+              </h3>
+            </div>
+
+            <!-- Calendar Widget -->
+            <div id="calendar" class="custom-calendar">
+              <div class="calendar-header">
+                <button onclick="previousMonth()" class="calendar-nav">
+                  ‹
+                </button>
+                <h3 id="currentMonth"></h3>
+                <button onclick="nextMonth()" class="calendar-nav">›</button>
+              </div>
+              <div class="calendar-weekdays">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sáb</div>
+              </div>
+              <div id="calendarDays" class="calendar-days"></div>
+            </div>
+
+            <!-- Time Slots -->
+            <div id="timeSlots" style="margin-top: 32px; display: none">
+              <h4
+                style="
+                  font-size: 18px;
+                  font-weight: 700;
+                  color: #1f2937;
+                  margin-bottom: 24px;
+                "
+              >
+                Horários Disponíveis para <span id="selectedDate"></span>
+              </h4>
+              <div id="timeSlotsGrid" class="time-slots-grid"></div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="agenda-sidebar">
+            <!-- Selected Appointment -->
+            <div
+              id="appointmentSummary"
+              style="
+                background: white;
+                border-radius: 24px;
+                padding: 32px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                display: none;
+                margin-bottom: 24px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  margin-bottom: 24px;
+                "
+              >
+                <div
+                  style="
+                    background: linear-gradient(135deg, #16a34a, #15803d);
+                    color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                  "
+                >
+                  ✓
+                </div>
+                <h3
+                  style="
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #1f2937;
+                    margin: 0;
+                  "
+                >
+                  Agendamento Selecionado
+                </h3>
+              </div>
+              <div id="appointmentDetails"></div>
+              <button
+                onclick="confirmAppointment()"
+                class="btn-primary"
+                style="width: 100%; justify-content: center; margin-top: 20px"
+              >
+                <span>📋</span>
+                <span>Preencher Formulário</span>
+              </button>
+            </div>
+
+            <!-- Schedule Info -->
+            <div
+              style="
+                background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+                border-radius: 24px;
+                padding: 32px;
+                margin-bottom: 24px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  margin-bottom: 24px;
+                "
+              >
+                <div
+                  style="
+                    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+                    color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                  "
+                >
+                  🕐
+                </div>
+                <h3
+                  style="
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #1f2937;
+                    margin: 0;
+                  "
+                >
+                  Horários de Atendimento
+                </h3>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                  "
+                >
+                  <span style="font-weight: 500; color: #374151"
+                    >Segunda - Sexta:</span
+                  >
+                  <span style="color: #6b7280">7h às 22h</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                  "
+                >
+                  <span style="font-weight: 500; color: #374151">Sábado:</span>
+                  <span style="color: #6b7280">7h às 18h</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                  "
+                >
+                  <span style="font-weight: 500; color: #374151">Domingo:</span>
+                  <span style="color: #ef4444; font-weight: 600"
+                    >Apenas Emergências</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Schedule -->
+            <div
+              style="
+                background: white;
+                border-radius: 24px;
+                padding: 32px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                margin-bottom: 24px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  margin-bottom: 24px;
+                "
+              >
+                <div
+                  style="
+                    background: linear-gradient(135deg, #16a34a, #15803d);
+                    color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                  "
+                >
+                  ⚡
+                </div>
+                <h3
+                  style="
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #1f2937;
+                    margin: 0;
+                  "
+                >
+                  Agendamento Rápido
+                </h3>
+              </div>
+              <p style="color: #6b7280; margin-bottom: 20px; font-size: 14px">
+                Precisa agendar rapidamente? Use nosso formulário!
+              </p>
+              <a
+                href="orcamento.html"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                  background: linear-gradient(135deg, #16a34a, #15803d);
+                  color: white;
+                  padding: 16px;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  transition: all 0.3s ease;
+                "
+              >
+                <span>📋</span>
+                <span>Agendar Agora</span>
+              </a>
+            </div>
+
+            <!-- Emergency -->
+            <div
+              style="
+                background: linear-gradient(135deg, #fef2f2, #fee2e2);
+                border: 2px solid #fecaca;
+                border-radius: 24px;
+                padding: 32px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  margin-bottom: 16px;
+                "
+              >
+                <div
+                  style="
+                    background: linear-gradient(135deg, #ef4444, #dc2626);
+                    color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                  "
+                >
+                  🚨
+                </div>
+                <h3
+                  style="
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #dc2626;
+                    margin: 0;
+                  "
+                >
+                  Emergência?
+                </h3>
+              </div>
+              <p style="color: #dc2626; margin-bottom: 20px; font-size: 14px">
+                Para emergências, atendemos 24h!
+              </p>
+              <a
+                href="orcamento.html"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                  background: linear-gradient(135deg, #ef4444, #dc2626);
+                  color: white;
+                  padding: 16px;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  transition: all 0.3s ease;
+                "
+              >
+                <span>🚨</span>
+                <span>Solicitar Emergência</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float" id="whatsappFloat">
+      <div class="quick-messages" id="quickMessages">
+        <div class="quick-messages-content">
+          <div class="quick-messages-header">
+            <div class="status-dot"></div>
+            <h3>Como podemos ajudar?</h3>
+            <button onclick="toggleQuickMessages()" class="close-btn">✕</button>
+          </div>
+          <div class="quick-messages-list">
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">📅</span>
+              <span>Agendar para hoje</span>
+            </a>
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">📆</span>
+              <span>Agendar para esta semana</span>
+            </a>
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">🚨</span>
+              <span>Emergência elétrica</span>
+            </a>
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">🔄</span>
+              <span>Reagendar serviço</span>
+            </a>
+          </div>
+          <div class="quick-messages-footer">
+            <span class="icon">📞</span>
+            <span>Resposta em até 5 minutos</span>
+          </div>
+        </div>
+      </div>
+      <button class="whatsapp-btn" onclick="toggleQuickMessages()">
+        <span class="pulse-ring"></span>
+        <span class="whatsapp-icon" id="whatsappIcon">💬</span>
+        <div class="notification-badge">⚡</div>
+        <div class="tooltip">Fale conosco agora!</div>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section company">
+            <div class="footer-logo">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div>
+                <h3>CA Soluções</h3>
+                <p>⚡ Especialistas em Elétrica</p>
+              </div>
+            </div>
+            <p class="company-description">
+              Sua solução completa para <strong>elétrica residencial</strong>.
+              Instalação completa, mapeamento, reparos e desentupimentos com
+              <span class="highlight">garantia por escrito</span> e preço justo.
+            </p>
+            <div class="company-features">
+              <div class="feature-item">
+                <span class="icon">🛡️</span>
+                <span>Garantia por Escrito</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">🕐</span>
+                <span>Atendimento 24h</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">⚡</span>
+                <span>200+ Clientes</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/ca.solucao/"
+                target="_blank"
+                class="social-link instagram"
+                >📷</a
+              >
+              <a href="#" class="social-link facebook">📘</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="agenda.html">Agenda</a></li>
+              <li><a href="orcamento.html">Orçamento</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="sobre.html">Sobre Nós</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <div class="contact-info">
+              <a
+                href="https://wa.me/5527992472266"
+                target="_blank"
+                class="contact-item whatsapp"
+              >
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-title">(27) 99247-2266</div>
+                  <div class="contact-subtitle">WhatsApp 24h</div>
+                </div>
+              </a>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <div class="contact-title">contato@casolucoes.com</div>
+                  <div class="contact-subtitle">E-mail profissional</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-title">Vila Velha, ES</div>
+                  <div class="contact-subtitle">Região Metropolitana</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 CA Soluções - Especialistas em Elétrica. Todos os direitos
+            reservados.
+          </p>
+          <div class="footer-credits">
+            <span>Desenvolvido com ⚡ por CA Soluções</span>
+            <span>•</span>
+            <span>Vila Velha, ES</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="agenda.js"></script>
+  </body>
+</html>

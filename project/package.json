@@ -1,0 +1,23 @@
+{
+  "name": "ca-solucoes-website",
+  "version": "1.0.0",
+  "description": "Website profissional da CA Soluções - Especialistas em Elétrica",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite --host",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "keywords": [
+    "eletrica",
+    "servicos",
+    "residencial",
+    "vitoria",
+    "espirito-santo"
+  ],
+  "author": "CA Soluções",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

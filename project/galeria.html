@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA Soluções - Galeria de Trabalhos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo" onclick="window.location.href='index.html'">
+            <div class="logo-image">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div class="status-indicator"></div>
+            </div>
+            <div class="logo-text">
+              <h1>CA Soluções</h1>
+              <p>⚡ Especialistas em Elétrica</p>
+            </div>
+          </div>
+
+          <nav class="nav-desktop">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="servicos.html" class="nav-link">Serviços</a>
+            <a href="agenda.html" class="nav-link">Agenda</a>
+            <a href="orcamento.html" class="nav-link">Orçamento</a>
+            <a href="galeria.html" class="nav-link active">Galeria</a>
+            <a href="sobre.html" class="nav-link">Sobre Nós</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+          </nav>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="servicos.html" class="mobile-nav-link">Serviços</a>
+          <a href="agenda.html" class="mobile-nav-link">Agenda</a>
+          <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+          <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+          <a href="sobre.html" class="mobile-nav-link">Sobre Nós</a>
+          <a href="contato.html" class="mobile-nav-link">Contato</a>
+          <a
+            href="https://wa.me/5527992472266?text=Olá! Preciso de ajuda com um serviço urgente."
+            target="_blank"
+            class="mobile-whatsapp"
+          >
+            📞 WhatsApp 24h
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">📸</div>
+            <span>NOSSOS TRABALHOS REALIZADOS</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">GALERIA DE</span>
+            <span class="title-line gradient">PROJETOS</span>
+          </h1>
+
+          <p class="hero-description">
+            Veja alguns dos nossos trabalhos realizados. Mais de 500 projetos
+            executados com
+            <span class="highlight">qualidade profissional</span> e garantia por
+            escrito.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nossos Trabalhos</h2>
+          <p>Projetos realizados com excelência e qualidade profissional</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 48px;
+          "
+        >
+          <button
+            onclick="filterGallery('all')"
+            class="filter-btn active"
+            data-filter="all"
+          >
+            <span>🔧</span>
+            <span>Todos</span>
+          </button>
+          <button
+            onclick="filterGallery('eletrica')"
+            class="filter-btn"
+            data-filter="eletrica"
+          >
+            <span>⚡</span>
+            <span>Elétrica</span>
+          </button>
+          <button
+            onclick="filterGallery('instalacao')"
+            class="filter-btn"
+            data-filter="instalacao"
+          >
+            <span>🏠</span>
+            <span>Instalações</span>
+          </button>
+          <button
+            onclick="filterGallery('reparos')"
+            class="filter-btn"
+            data-filter="reparos"
+          >
+            <span>🔧</span>
+            <span>Reparos</span>
+          </button>
+          <button
+            onclick="filterGallery('outros')"
+            class="filter-btn"
+            data-filter="outros"
+          >
+            <span>🛠️</span>
+            <span>Outros</span>
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- Electrical Work -->
+          <div class="gallery-item" data-category="eletrica instalacao">
+            <div class="gallery-image">
+              <img src="./public/luz.png" alt="Instalação Elétrica Completa" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Instalação Elétrica Completa</h3>
+                  <p>Casa de 3 quartos - Vitória/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">⚡ Elétrica</span>
+                    <span class="tag">🏠 Residencial</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="eletrica reparos">
+            <div class="gallery-image">
+              <img src="./public/tomada.png" alt="Chuveiro Elétrico" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Ligação na tomada com fios bem conectados</h3>
+                  <p>Instalação completa - Vila Velha/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">⚡ Elétrica</span>
+                    <span class="tag">🔧 Reparo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="outros">
+            <div class="gallery-image">
+              <img src="./public/fechadura.png" alt="Fechadura Eletrônica" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Fechadura Eletrônica</h3>
+                  <p>Instalação biométrica - Cariacica/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">🔐 Segurança</span>
+                    <span class="tag">🏠 Residencial</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="eletrica instalacao">
+            <div class="gallery-image">
+              <img src="./public/luz 2.png" alt="Iluminação LED" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Iluminação LED</h3>
+                  <p>Bancada de cozinha - Serra/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">💡 LED</span>
+                    <span class="tag">🏠 Cozinha</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="reparos">
+            <div class="gallery-image">
+              <img src="./public/elétrica.png" alt="Reparo Elétrico" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Reparo de Curto-Circuito</h3>
+                  <p>Emergência resolvida - Vitória/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">🚨 Emergência</span>
+                    <span class="tag">🔧 Reparo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="outros">
+            <div class="gallery-image">
+              <img src="./public/vaso.png" alt="Encanamento" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Encamento</h3>
+                  <p>Encamento Vaso Sanitário - Vila Velha/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">💧 Hidráulica</span>
+                    <span class="tag">🏠 Cozinha</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="eletrica instalacao">
+            <div class="gallery-image">
+              <img src="./public/suporte.png" alt="Suporte" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>instalação de suporte de TV</h3>
+                  <p>instalação de suporte de TV - Cariacica/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">⚡ Instalação</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="eletrica reparos">
+            <div class="gallery-image">
+              <img src="./public/led.png" alt="Mapeamento Elétrico" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Mapeamento Elétrico</h3>
+                  <p>Diagnóstico completo - Serra/ES</p>
+                  <div class="gallery-tags">
+                    <span class="tag">🗺️ Mapeamento</span>
+                    <span class="tag">⚡ Elétrica</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="outros">
+            <div class="gallery-image">
+              <img src="./public/armario.png" alt="Encamento" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h3>Troca de aramado</h3>
+                  <p>
+                    troca do aramado porta temperos e a plotagem do armário -
+                    Vitória/ES
+                  </p>
+                  <div class="gallery-tags">
+                    <span class="tag">🛠️ Montagem</span>
+                    <span class="tag">🏠 Quarto</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div
+          style="
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-radius: 24px;
+            padding: 48px;
+            margin-top: 64px;
+          "
+        >
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-icon">📸</div>
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Projetos Realizados</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">⭐</div>
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Clientes Satisfeitos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Garantia nos Serviços</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">⚡</div>
+              <div class="stat-number">24h</div>
+              <div class="stat-label">Atendimento Emergencial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-badge">
+            <span class="icon">💼</span>
+            <span>Quer um trabalho como estes?</span>
+          </div>
+
+          <h2>
+            Seu Projeto Pode Ser
+            <br />
+            <span class="gradient">O Próximo!</span>
+          </h2>
+
+          <p>
+            Entre em contato conosco e receba um orçamento gratuito para seu
+            projeto. Garantimos a mesma qualidade e excelência em todos os
+            nossos trabalhos.
+          </p>
+
+          <div class="cta-buttons">
+            <a
+              href="https://wa.me/5527992472266?text=Vi a galeria de vocês! Gostaria de um orçamento para meu projeto."
+              target="_blank"
+              class="btn-primary"
+            >
+              <span>💬 Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+            <a href="orcamento.html" class="btn-secondary">
+              <span>📋 Formulário Online</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float" id="whatsappFloat">
+      <div class="quick-messages" id="quickMessages">
+        <div class="quick-messages-content">
+          <div class="quick-messages-header">
+            <div class="status-dot"></div>
+            <h3>Como podemos ajudar?</h3>
+            <button onclick="toggleQuickMessages()" class="close-btn">✕</button>
+          </div>
+          <div class="quick-messages-list">
+            <a
+              href="https://wa.me/5527992472266?text=Vi a galeria! Quero um projeto igual"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">📸</span>
+              <span>Quero um projeto igual</span>
+            </a>
+            <a
+              href="https://wa.me/5527992472266?text=Gostaria de um orçamento"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">💰</span>
+              <span>Solicitar orçamento</span>
+            </a>
+            <a
+              href="https://wa.me/5527992472266?text=Tenho um problema elétrico urgente"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">🚨</span>
+              <span>Emergência elétrica</span>
+            </a>
+            <a
+              href="https://wa.me/5527992472266?text=Gostaria de agendar um serviço"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">📅</span>
+              <span>Agendar serviço</span>
+            </a>
+          </div>
+          <div class="quick-messages-footer">
+            <span class="icon">📞</span>
+            <span>Resposta em até 5 minutos</span>
+          </div>
+        </div>
+      </div>
+      <button class="whatsapp-btn" onclick="toggleQuickMessages()">
+        <span class="pulse-ring"></span>
+        <span class="whatsapp-icon" id="whatsappIcon">💬</span>
+        <div class="notification-badge">⚡</div>
+        <div class="tooltip">Fale conosco agora!</div>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section company">
+            <div class="footer-logo">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div>
+                <h3>CA Soluções</h3>
+                <p>⚡ Especialistas em Elétrica</p>
+              </div>
+            </div>
+            <p class="company-description">
+              Sua solução completa para <strong>elétrica residencial</strong>.
+              Instalação completa, mapeamento, reparos e desentupimentos com
+              <span class="highlight">garantia por escrito</span> e preço justo.
+            </p>
+            <div class="company-features">
+              <div class="feature-item">
+                <span class="icon">🛡️</span>
+                <span>Garantia por Escrito</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">🕐</span>
+                <span>Atendimento 24h</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">⚡</span>
+                <span>200+ Clientes</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/ca.solucao/"
+                target="_blank"
+                class="social-link instagram"
+                >📷</a
+              >
+              <a href="#" class="social-link facebook">📘</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="agenda.html">Agenda</a></li>
+              <li><a href="orcamento.html">Orçamento</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="sobre.html">Sobre Nós</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <div class="contact-info">
+              <a
+                href="https://wa.me/5527992472266"
+                target="_blank"
+                class="contact-item whatsapp"
+              >
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-title">(27) 99247-2266</div>
+                  <div class="contact-subtitle">WhatsApp 24h</div>
+                </div>
+              </a>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <div class="contact-title">contato@casolucoes.com</div>
+                  <div class="contact-subtitle">E-mail profissional</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-title">Vila Velha, ES</div>
+                  <div class="contact-subtitle">Região Metropolitana</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 CA Soluções - Especialistas em Elétrica. Todos os direitos
+            reservados.
+          </p>
+          <div class="footer-credits">
+            <span>Desenvolvido com ⚡ por CA Soluções</span>
+            <span>•</span>
+            <span>Vila Velha, ES</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Gallery filter functionality
+      function filterGallery(category) {
+        const items = document.querySelectorAll(".gallery-item")
+        const buttons = document.querySelectorAll(".filter-btn")
+
+        // Update active button
+        buttons.forEach((btn) => btn.classList.remove("active"))
+        document
+          .querySelector(`[data-filter="${category}"]`)
+          .classList.add("active")
+
+        // Filter items
+        items.forEach((item) => {
+          if (category === "all" || item.dataset.category.includes(category)) {
+            item.style.display = "block"
+            item.style.opacity = "0"
+            setTimeout(() => {
+              item.style.opacity = "1"
+            }, 100)
+          } else {
+            item.style.opacity = "0"
+            setTimeout(() => {
+              item.style.display = "none"
+            }, 300)
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

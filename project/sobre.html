@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Soluções - Sobre Nós</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="window.location.href='index.html'">
+                    <div class="logo-image">
+                        <img src="./public/ca.jpg" alt="CA Soluções">
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="logo-text">
+                        <h1>CA Soluções</h1>
+                        <p>⚡ Especialistas em Elétrica</p>
+                    </div>
+                </div>
+
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="agenda.html" class="nav-link">Agenda</a>
+                    <a href="orcamento.html" class="nav-link">Orçamento</a>
+                    <a href="galeria.html" class="nav-link">Galeria</a>
+                    <a href="sobre.html" class="nav-link active">Sobre Nós</a>
+                    <a href="contato.html" class="nav-link">Contato</a>
+                </nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="servicos.html" class="mobile-nav-link">Serviços</a>
+                <a href="agenda.html" class="mobile-nav-link">Agenda</a>
+                <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+                <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre Nós</a>
+                <a href="contato.html" class="mobile-nav-link">Contato</a>
+                <a href="https://wa.me/5527992472266?text=Olá! Preciso de ajuda com um serviço urgente." target="_blank" class="mobile-whatsapp">
+                    📞 WhatsApp 24h
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="badge-icon">👥</div>
+                    <span>CONHEÇA NOSSA HISTÓRIA</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">SOBRE A</span>
+                    <span class="title-line gradient">CA SOLUÇÕES</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Especialistas em elétrica residencial com mais de 200 clientes satisfeitos. 
+                    Nossa missão é oferecer soluções completas com <span class="highlight">qualidade profissional</span> 
+                    e garantia por escrito.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="services">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 80px;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px;">
+                        <div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px;">⚡</div>
+                        <h2 style="font-size: 32px; font-weight: 700; color: #1f2937; margin: 0;">Nossa História</h2>
+                    </div>
+                    <p style="color: #6b7280; line-height: 1.8; margin-bottom: 24px; font-size: 18px;">
+                        A <strong>CA Soluções</strong> nasceu da paixão por resolver problemas e oferecer soluções 
+                        completas para nossos clientes. Comandada pelo <strong>Renan Andrade</strong>, nossa equipe 
+                        se especializou em elétrica residencial, tornando-se referência na região metropolitana 
+                        de Vitória.
+                    </p>
+                    <p style="color: #6b7280; line-height: 1.8; margin-bottom: 32px; font-size: 18px;">
+                        Com mais de <strong>500 serviços realizados</strong> e <strong>200 clientes satisfeitos</strong>, 
+                        construímos nossa reputação baseada na qualidade, pontualidade e garantia por escrito 
+                        em todos os nossos trabalhos.
+                    </p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="orcamento.html" class="btn-primary">
+                            <span>Solicitar Orçamento</span>
+                        </a>
+                        <a href="galeria.html" class="btn-secondary" style="color: #3b82f6; border-color: #3b82f6;">
+                            <span>Ver Trabalhos</span>
+                        </a>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-radius: 24px; padding: 48px;">
+                    <div style="text-align: center;">
+                        <div style="background: white; width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">
+                            <img src="./public/Captura de tela 2025-06-28 191551.png" alt="CA Soluções" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <h3 style="font-size: 24px; font-weight: 700; color: #166534; margin-bottom: 16px;">Renan Andrade</h3>
+                        <p style="color: #166534; font-weight: 500; margin-bottom: 24px;">Fundador & Especialista em Elétrica</p>
+                        <div style="background: white; border-radius: 16px; padding: 24px;">
+                            <p style="color: #6b7280; font-style: italic; line-height: 1.6;">
+                                "Nossa missão é simples: resolver seus problemas com qualidade, 
+                                pontualidade e garantia. Cada cliente é único e merece um 
+                                atendimento personalizado."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission, Vision, Values -->
+            <div class="section-header">
+                <h2>Nossos Valores</h2>
+                <p>Os princípios que guiam nosso trabalho diariamente</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon blue">🎯</div>
+                    <h3>Nossa Missão</h3>
+                    <p>Oferecer soluções completas em elétrica residencial com qualidade profissional, garantia por escrito e preços justos, superando as expectativas dos nossos clientes.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon green">👁️</div>
+                    <h3>Nossa Visão</h3>
+                    <p>Ser a empresa de referência em serviços elétricos residenciais na Grande Vitória, reconhecida pela excelência, confiabilidade e inovação.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon yellow">💎</div>
+                    <h3>Nossos Valores</h3>
+                    <p>Qualidade, transparência, pontualidade, segurança e compromisso com a satisfação do cliente são os pilares que sustentam todos os nossos serviços.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por Que Escolher a CA Soluções?</h2>
+                <p>Diferenciais que nos tornam únicos no mercado</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon yellow">⚡</div>
+                    <h3>Especialização em Elétrica</h3>
+                    <p>Foco total em serviços elétricos residenciais. Conhecimento profundo e experiência comprovada em instalações, mapeamento e reparos elétricos.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon green">🛡️</div>
+                    <h3>Garantia por Escrito</h3>
+                    <p>Todos os nossos serviços possuem garantia documentada. Sua tranquilidade e segurança são nossa prioridade máxima.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon blue">🕐</div>
+                    <h3>Atendimento 24h</h3>
+                    <p>Emergências elétricas não esperam. Por isso, oferecemos atendimento 24 horas para situações urgentes e críticas.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon purple">💰</div>
+                    <h3>Preços Transparentes</h3>
+                    <p>Orçamentos claros e detalhados, sem surpresas ou custos ocultos. Você paga exatamente pelo que foi acordado.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon green">📍</div>
+                    <h3>Atendimento Local</h3>
+                    <p>Conhecemos a região metropolitana de Vitória como ninguém. Atendimento rápido e personalizado para toda a Grande Vitória.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon blue">🔧</div>
+                    <h3>Equipamentos Modernos</h3>
+                    <p>Utilizamos ferramentas e equipamentos de última geração para garantir a máxima qualidade e segurança em todos os serviços.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Numbers Section -->
+    <section class="services" style="background: linear-gradient(135deg, #f0fdf4, #dcfce7);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Números que Comprovam Nossa Qualidade</h2>
+                <p>Resultados que falam por si só</p>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Serviços Realizados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number">5.0</div>
+                    <div class="stat-label">Avaliação Média</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🛡️</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Garantia nos Serviços</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🕐</div>
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Atendimento Emergencial</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">📍</div>
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Cidades Atendidas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Equipe</h2>
+                <p>Profissionais qualificados e comprometidos com a excelência</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                <div style="background: white; border-radius: 24px; padding: 32px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white;">👨‍🔧</div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: #1f2937; margin-bottom: 8px;">Renan Andrade</h3>
+                    <p style="color: #3b82f6; font-weight: 600; margin-bottom: 16px;">Fundador & Eletricista Especialista</p>
+                    <p style="color: #6b7280; line-height: 1.6;">
+                        Especialista em instalações elétricas residenciais com anos de experiência. 
+                        Responsável pela qualidade técnica e atendimento personalizado.
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: 24px; padding: 32px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="background: linear-gradient(135deg, #16a34a, #15803d); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white;">🛠️</div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: #1f2937; margin-bottom: 8px;">Equipe Técnica</h3>
+                    <p style="color: #16a34a; font-weight: 600; margin-bottom: 16px;">Profissionais Qualificados</p>
+                    <p style="color: #6b7280; line-height: 1.6;">
+                        Nossa equipe é formada por profissionais experientes e qualificados, 
+                        sempre atualizados com as melhores práticas do mercado.
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: 24px; padding: 32px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="background: linear-gradient(135deg, #f59e0b, #d97706); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white;">📞</div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: #1f2937; margin-bottom: 8px;">Atendimento</h3>
+                    <p style="color: #f59e0b; font-weight: 600; margin-bottom: 16px;">Suporte 24h</p>
+                    <p style="color: #6b7280; line-height: 1.6;">
+                        Atendimento dedicado e personalizado, disponível 24 horas para 
+                        emergências e esclarecimento de dúvidas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <span class="icon">🤝</span>
+                    <span>Faça parte da nossa família de clientes</span>
+                </div>
+                
+                <h2>
+                    Pronto Para Conhecer
+                    <br>
+                    <span class="gradient">Nossa Qualidade?</span>
+                </h2>
+                
+                <p>
+                    Entre em contato conosco e descubra por que mais de 200 clientes confiam 
+                    na CA Soluções para resolver seus problemas elétricos.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5527992472266?text=Olá! Gostaria de conhecer mais sobre os serviços da CA Soluções." target="_blank" class="btn-primary">
+                        <span>💬 Falar Conosco</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="orcamento.html" class="btn-secondary">
+                        <span>📋 Solicitar Orçamento</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float" id="whatsappFloat">
+        <div class="quick-messages" id="quickMessages">
+            <div class="quick-messages-content">
+                <div class="quick-messages-header">
+                    <div class="status-dot"></div>
+                    <h3>Como podemos ajudar?</h3>
+                    <button onclick="toggleQuickMessages()" class="close-btn">✕</button>
+                </div>
+                <div class="quick-messages-list">
+                    <a href="https://wa.me/5527992472266?text=Gostaria de conhecer mais sobre a CA Soluções" target="_blank" class="quick-message">
+                        <span class="emoji">👥</span>
+                        <span>Conhecer a empresa</span>
+                    </a>
+                    <a href="https://wa.me/5527992472266?text=Gostaria de um orçamento" target="_blank" class="quick-message">
+                        <span class="emoji">💰</span>
+                        <span>Solicitar orçamento</span>
+                    </a>
+                    <a href="https://wa.me/5527992472266?text=Tenho um problema elétrico urgente" target="_blank" class="quick-message">
+                        <span class="emoji">🚨</span>
+                        <span>Emergência elétrica</span>
+                    </a>
+                    <a href="https://wa.me/5527992472266?text=Gostaria de agendar um serviço" target="_blank" class="quick-message">
+                        <span class="emoji">📅</span>
+                        <span>Agendar serviço</span>
+                    </a>
+                </div>
+                <div class="quick-messages-footer">
+                    <span class="icon">📞</span>
+                    <span>Resposta em até 5 minutos</span>
+                </div>
+            </div>
+        </div>
+        <button class="whatsapp-btn" onclick="toggleQuickMessages()">
+            <span class="pulse-ring"></span>
+            <span class="whatsapp-icon" id="whatsappIcon">💬</span>
+            <div class="notification-badge">⚡</div>
+            <div class="tooltip">Fale conosco agora!</div>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section company">
+                    <div class="footer-logo">
+                        <img src="./public/ca.jpg" alt="CA Soluções">
+                        <div>
+                            <h3>CA Soluções</h3>
+                            <p>⚡ Especialistas em Elétrica</p>
+                        </div>
+                    </div>
+                    <p class="company-description">
+                        Sua solução completa para <strong>elétrica residencial</strong>. 
+                        Instalação completa, mapeamento, reparos e desentupimentos com 
+                        <span class="highlight">garantia por escrito</span> e preço justo.
+                    </p>
+                    <div class="company-features">
+                        <div class="feature-item">
+                            <span class="icon">🛡️</span>
+                            <span>Garantia por Escrito</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">🕐</span>
+                            <span>Atendimento 24h</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">⚡</span>
+                            <span>200+ Clientes</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ca.solucao/" target="_blank" class="social-link instagram">📷</a>
+                        <a href="#" class="social-link facebook">📘</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="orcamento.html">Orçamento</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <a href="https://wa.me/5527992472266" target="_blank" class="contact-item whatsapp">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <div class="contact-title">(27) 99247-2266</div>
+                                <div class="contact-subtitle">WhatsApp 24h</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <div class="contact-title">contato@casolucoes.com</div>
+                                <div class="contact-subtitle">E-mail profissional</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <div class="contact-title">Vila Velha, ES</div>
+                                <div class="contact-subtitle">Região Metropolitana</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 CA Soluções - Especialistas em Elétrica. Todos os direitos reservados.</p>
+                <div class="footer-credits">
+                    <span>Desenvolvido com ⚡ por CA Soluções</span>
+                    <span>•</span>
+                    <span>Vila Velha, ES</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA Soluções - Nossos Serviços</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo" onclick="window.location.href='index.html'">
+            <div class="logo-image">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div class="status-indicator"></div>
+            </div>
+            <div class="logo-text">
+              <h1>CA Soluções</h1>
+              <p>⚡ Especialistas em Elétrica</p>
+            </div>
+          </div>
+
+          <nav class="nav-desktop">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="servicos.html" class="nav-link active">Serviços</a>
+            <a href="agenda.html" class="nav-link">Agenda</a>
+            <a href="orcamento.html" class="nav-link">Orçamento</a>
+            <a href="galeria.html" class="nav-link">Galeria</a>
+            <a href="sobre.html" class="nav-link">Sobre Nós</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+          </nav>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="servicos.html" class="mobile-nav-link">Serviços</a>
+          <a href="agenda.html" class="mobile-nav-link">Agenda</a>
+          <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+          <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+          <a href="sobre.html" class="mobile-nav-link">Sobre Nós</a>
+          <a href="contato.html" class="mobile-nav-link">Contato</a>
+          <a
+            href="https://wa.me/5527992472266?text=Olá! Preciso de ajuda com um serviço urgente."
+            target="_blank"
+            class="mobile-whatsapp"
+          >
+            📞 WhatsApp 24h
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">🔧</div>
+            <span>ESPECIALISTAS EM ELÉTRICA</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">NOSSOS</span>
+            <span class="title-line gradient">SERVIÇOS</span>
+          </h1>
+
+          <p class="hero-description">
+            Soluções completas em elétrica residencial com mais de 500 serviços
+            realizados.
+            <span class="highlight">Garantia por escrito</span> e preço justo em
+            todos os trabalhos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Serviços Especializados</h2>
+          <p>
+            Soluções completas com
+            <span class="highlight">garantia profissional</span>
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">⚡</div>
+            </div>
+            <h3>Instalação Elétrica Completa</h3>
+            <p>
+              Especialistas em instalação elétrica completa da casa toda com
+              mapeamento detalhado e garantia.
+            </p>
+            <ul class="service-examples">
+              <li>Instalação elétrica casa inteira</li>
+              <li>Mapeamento elétrico completo</li>
+              <li>Quadros elétricos novos</li>
+              <li>Cabeamento e distribuição</li>
+              <li>Tomadas e interruptores</li>
+              <li>Iluminação completa</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">Consulte</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">🗺️</div>
+            </div>
+            <h3>Mapeamento Elétrico</h3>
+            <p>
+              Mapeamento completo da instalação elétrica para identificar
+              problemas e otimizar o sistema.
+            </p>
+            <ul class="service-examples">
+              <li>Identificação de circuitos</li>
+              <li>Localização de problemas</li>
+              <li>Relatório detalhado</li>
+              <li>Sugestões de melhorias</li>
+              <li>Diagrama elétrico</li>
+              <li>Etiquetagem de quadros</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">R$ 150</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">🔧</div>
+            </div>
+            <h3>Reparos Elétricos</h3>
+            <p>
+              Diagnóstico e reparo de problemas elétricos com segurança total e
+              tecnologia avançada.
+            </p>
+            <ul class="service-examples">
+              <li>Troca de disjuntores</li>
+              <li>Reparo de curto-circuito</li>
+              <li>Instalação de chuveiros</li>
+              <li>Diagnóstico elétrico</li>
+              <li>Reparo de tomadas</li>
+              <li>Troca de fiação</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">R$ 80</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">🔌</div>
+            </div>
+            <h3>Quadros Elétricos</h3>
+            <p>
+              Instalação e modernização de quadros elétricos com disjuntores de
+              qualidade.
+            </p>
+            <ul class="service-examples">
+              <li>Quadros elétricos novos</li>
+              <li>Modernização de quadros</li>
+              <li>Disjuntores de qualidade</li>
+              <li>Organização de circuitos</li>
+              <li>Etiquetagem completa</li>
+              <li>Teste de segurança</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">R$ 300</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">🚿</div>
+            </div>
+            <h3>Instalação de Chuveiros</h3>
+            <p>
+              Instalação completa de chuveiros elétricos com fiação adequada e
+              segurança total.
+            </p>
+            <ul class="service-examples">
+              <li>Chuveiros elétricos</li>
+              <li>Fiação adequada</li>
+              <li>Disjuntor específico</li>
+              <li>Instalação segura</li>
+              <li>Teste de funcionamento</li>
+              <li>Garantia do serviço</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">R$ 120</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">💡</div>
+            </div>
+            <h3>Iluminação LED</h3>
+            <p>
+              Instalação de luzes LED em bancadas, ambientes e áreas externas
+              com controles modernos.
+            </p>
+            <ul class="service-examples">
+              <li>LEDs para bancadas</li>
+              <li>Iluminação de ambientes</li>
+              <li>Fitas LED decorativas</li>
+              <li>Controles e dimmers</li>
+              <li>Iluminação externa</li>
+              <li>Economia de energia</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">R$ 100</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">🔐</div>
+            </div>
+            <h3>Fechaduras Eletrônicas</h3>
+            <p>
+              Instalação de fechaduras eletrônicas e biométricas para maior
+              segurança e comodidade.
+            </p>
+            <ul class="service-examples">
+              <li>Fechaduras biométricas</li>
+              <li>Fechaduras com senha</li>
+              <li>Controle por aplicativo</li>
+              <li>Instalação completa</li>
+              <li>Configuração e teste</li>
+              <li>Treinamento de uso</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">R$ 200</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 8 -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">💧</div>
+            </div>
+            <h3>Desentupimentos</h3>
+            <p>
+              Desentupimento de pias, vasos sanitários, ralos e caixas de
+              gordura com equipamentos profissionais.
+            </p>
+            <ul class="service-examples">
+              <li>Desentupimento de pias</li>
+              <li>Vasos sanitários</li>
+              <li>Ralos e caixas de gordura</li>
+              <li>Equipamentos profissionais</li>
+              <li>Limpeza completa</li>
+              <li>Prevenção de entupimentos</li>
+            </ul>
+            <div class="service-price">
+              <span class="price-label">A partir de:</span>
+              <span class="price-value">R$ 80</span>
+            </div>
+            <a href="orcamento.html" class="service-btn">
+              <span>Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Service 9 - Emergency -->
+          <div class="service-card emergency">
+            <div class="service-header">
+              <div class="service-icon">🚨</div>
+              <div class="emergency-badge">24H</div>
+            </div>
+            <h3>Emergências 24h</h3>
+            <p>
+              Atendimento emergencial 24 horas para problemas elétricos urgentes
+              e outras emergências.
+            </p>
+            <ul class="service-examples">
+              <li>Emergências elétricas</li>
+              <li>Curto-circuito urgente</li>
+              <li>Falta de energia</li>
+              <li>Entupimentos urgentes</li>
+              <li>Atendimento imediato</li>
+              <li>Disponível 24h/7 dias</li>
+            </ul>
+            <div class="service-price emergency">
+              <span class="price-label">Taxa emergencial:</span>
+              <span class="price-value">+ 50%</span>
+            </div>
+            <a href="orcamento.html" class="service-btn emergency">
+              <span>Solicitar Emergência</span>
+              <span class="arrow">→</span>
+            </a>
+            <div class="emergency-footer">🚨 Atendimento 24h disponível!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+      <div class="container">
+        <div class="section-header">
+          <h2>Por Que Escolher a CA Soluções?</h2>
+          <p>Diferenciais que nos tornam únicos no mercado</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon yellow">⚡</div>
+            <h3>Especialização Total</h3>
+            <p>
+              Foco 100% em serviços elétricos residenciais. Conhecimento
+              profundo e experiência comprovada em mais de 500 projetos.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon green">🛡️</div>
+            <h3>Garantia por Escrito</h3>
+            <p>
+              Todos os nossos serviços possuem garantia documentada. Sua
+              tranquilidade e segurança são nossa prioridade máxima.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon blue">🕐</div>
+            <h3>Horários Flexíveis</h3>
+            <p>
+              Atendemos de segunda a sexta das 7h às 22h, sábados das 7h às 18h.
+              Emergências 24h todos os dias.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon purple">💰</div>
+            <h3>Preços Transparentes</h3>
+            <p>
+              Orçamentos claros e detalhados, sem surpresas ou custos ocultos.
+              Você paga exatamente pelo que foi acordado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Áreas de Atendimento</h2>
+          <p>Atendemos toda a região metropolitana de Vitória</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon blue">🏙️</div>
+            <h3>Vitória</h3>
+            <p>
+              Centro, Praia do Canto, Jardim Camburi, Jardim da Penha e todos os
+              bairros da capital capixaba.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon green">🏘️</div>
+            <h3>Vila Velha</h3>
+            <p>
+              Praia da Costa, Itapoã, Centro, Glória e demais bairros de Vila
+              Velha com atendimento rápido.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon yellow">🌳</div>
+            <h3>Serra</h3>
+            <p>
+              Laranjeiras, Colina de Laranjeiras, Jardim Limoeiro, Centro e toda
+              a região da Serra.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon purple">🏞️</div>
+            <h3>Cariacica</h3>
+            <p>
+              Campo Grande, Porto de Santana, Itacibá e demais localidades de
+              Cariacica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-badge">
+            <span class="icon">🔧</span>
+            <span>Mais de 500 serviços realizados</span>
+          </div>
+
+          <h2>
+            Precisa de um
+            <br />
+            <span class="gradient">Especialista?</span>
+          </h2>
+
+          <p>
+            Nossa equipe está pronta para resolver qualquer problema elétrico
+            com
+            <span class="highlight">garantia total</span> e preço justo.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="orcamento.html" class="btn-primary">
+              <span>📋 Solicitar Orçamento</span>
+              <span class="arrow">→</span>
+            </a>
+            <a href="agenda.html" class="btn-secondary">
+              <span>📅 Agendar Serviço</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float" id="whatsappFloat">
+      <div class="quick-messages" id="quickMessages">
+        <div class="quick-messages-content">
+          <div class="quick-messages-header">
+            <div class="status-dot"></div>
+            <h3>Como podemos ajudar?</h3>
+            <button onclick="toggleQuickMessages()" class="close-btn">✕</button>
+          </div>
+          <div class="quick-messages-list">
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">⚡</span>
+              <span>Instalação elétrica completa</span>
+            </a>
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">🔧</span>
+              <span>Reparo elétrico</span>
+            </a>
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">🚨</span>
+              <span>Emergência 24h</span>
+            </a>
+            <a href="orcamento.html" class="quick-message">
+              <span class="emoji">💡</span>
+              <span>Outros serviços</span>
+            </a>
+          </div>
+          <div class="quick-messages-footer">
+            <span class="icon">📞</span>
+            <span>Resposta em até 5 minutos</span>
+          </div>
+        </div>
+      </div>
+      <button class="whatsapp-btn" onclick="toggleQuickMessages()">
+        <span class="pulse-ring"></span>
+        <span class="whatsapp-icon" id="whatsappIcon">💬</span>
+        <div class="notification-badge">⚡</div>
+        <div class="tooltip">Fale conosco agora!</div>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section company">
+            <div class="footer-logo">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div>
+                <h3>CA Soluções</h3>
+                <p>⚡ Especialistas em Elétrica</p>
+              </div>
+            </div>
+            <p class="company-description">
+              Sua solução completa para <strong>elétrica residencial</strong>.
+              Instalação completa, mapeamento, reparos e desentupimentos com
+              <span class="highlight">garantia por escrito</span> e preço justo.
+            </p>
+            <div class="company-features">
+              <div class="feature-item">
+                <span class="icon">🛡️</span>
+                <span>Garantia por Escrito</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">🕐</span>
+                <span>Atendimento 24h</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">⚡</span>
+                <span>200+ Clientes</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/ca.solucao/"
+                target="_blank"
+                class="social-link instagram"
+                >📷</a
+              >
+              <a href="#" class="social-link facebook">📘</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="agenda.html">Agenda</a></li>
+              <li><a href="orcamento.html">Orçamento</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="sobre.html">Sobre Nós</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <div class="contact-info">
+              <a
+                href="https://wa.me/5527992472266"
+                target="_blank"
+                class="contact-item whatsapp"
+              >
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-title">(27) 99247-2266</div>
+                  <div class="contact-subtitle">WhatsApp 24h</div>
+                </div>
+              </a>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <div class="contact-title">contato@casolucoes.com</div>
+                  <div class="contact-subtitle">E-mail profissional</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-title">Vila Velha, ES</div>
+                  <div class="contact-subtitle">Região Metropolitana</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 CA Soluções - Especialistas em Elétrica. Todos os direitos
+            reservados.
+          </p>
+          <div class="footer-credits">
+            <span>Desenvolvido com ⚡ por CA Soluções</span>
+            <span>•</span>
+            <span>Vila Velha, ES</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

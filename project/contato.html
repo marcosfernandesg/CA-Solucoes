@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA Soluções - Contato</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo" onclick="window.location.href='index.html'">
+            <div class="logo-image">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div class="status-indicator"></div>
+            </div>
+            <div class="logo-text">
+              <h1>CA Soluções</h1>
+              <p>⚡ Especialistas em Elétrica</p>
+            </div>
+          </div>
+
+          <nav class="nav-desktop">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="servicos.html" class="nav-link">Serviços</a>
+            <a href="agenda.html" class="nav-link">Agenda</a>
+            <a href="orcamento.html" class="nav-link">Orçamento</a>
+            <a href="galeria.html" class="nav-link">Galeria</a>
+            <a href="sobre.html" class="nav-link">Sobre Nós</a>
+            <a href="contato.html" class="nav-link active">Contato</a>
+          </nav>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="servicos.html" class="mobile-nav-link">Serviços</a>
+          <a href="agenda.html" class="mobile-nav-link">Agenda</a>
+          <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+          <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+          <a href="sobre.html" class="mobile-nav-link">Sobre Nós</a>
+          <a href="contato.html" class="mobile-nav-link">Contato</a>
+          <a
+            href="https://wa.me/5527992472266?text=Olá! Preciso de ajuda com um serviço urgente."
+            target="_blank"
+            class="mobile-whatsapp"
+          >
+            📞 WhatsApp 24h
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="badge-icon">📞</div>
+            <span>FALE CONOSCO AGORA</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">ENTRE EM</span>
+            <span class="title-line gradient">CONTATO</span>
+          </h1>
+
+          <p class="hero-description">
+            Estamos prontos para atender você! Entre em contato conosco pelo
+            WhatsApp, telefone ou e-mail.
+            <span class="highlight">Atendimento 24h</span> para emergências.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="services">
+      <div class="container">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+          "
+        >
+          <!-- Contact Form -->
+          <div
+            style="
+              background: white;
+              border-radius: 24px;
+              padding: 48px;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-bottom: 32px;
+              "
+            >
+              <div
+                style="
+                  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+                  color: white;
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 12px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 24px;
+                "
+              >
+                📧
+              </div>
+              <h2
+                style="
+                  font-size: 28px;
+                  font-weight: 700;
+                  color: #1f2937;
+                  margin: 0;
+                "
+              >
+                Envie uma Mensagem
+              </h2>
+            </div>
+
+            <form id="contactForm" onsubmit="return submitContactForm(event)">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 24px;
+                  margin-bottom: 24px;
+                "
+              >
+                <div>
+                  <label
+                    style="
+                      display: block;
+                      font-weight: 500;
+                      color: #374151;
+                      margin-bottom: 8px;
+                    "
+                    >Nome *</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 16px;
+                      border: 2px solid #e5e7eb;
+                      border-radius: 12px;
+                      font-size: 16px;
+                      transition: all 0.3s ease;
+                    "
+                    placeholder="Seu nome"
+                    onfocus="this.style.borderColor='#3b82f6'"
+                    onblur="this.style.borderColor='#e5e7eb'"
+                  />
+                </div>
+                <div>
+                  <label
+                    style="
+                      display: block;
+                      font-weight: 500;
+                      color: #374151;
+                      margin-bottom: 8px;
+                    "
+                    >WhatsApp *</label
+                  >
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    style="
+                      width: 100%;
+                      padding: 16px;
+                      border: 2px solid #e5e7eb;
+                      border-radius: 12px;
+                      font-size: 16px;
+                      transition: all 0.3s ease;
+                    "
+                    placeholder="(27) 99999-9999"
+                    onfocus="this.style.borderColor='#3b82f6'"
+                    onblur="this.style.borderColor='#e5e7eb'"
+                  />
+                </div>
+              </div>
+
+              <div style="margin-bottom: 24px">
+                <label
+                  style="
+                    display: block;
+                    font-weight: 500;
+                    color: #374151;
+                    margin-bottom: 8px;
+                  "
+                  >E-mail</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  style="
+                    width: 100%;
+                    padding: 16px;
+                    border: 2px solid #e5e7eb;
+                    border-radius: 12px;
+                    font-size: 16px;
+                    transition: all 0.3s ease;
+                  "
+                  placeholder="seu@email.com"
+                  onfocus="this.style.borderColor='#3b82f6'"
+                  onblur="this.style.borderColor='#e5e7eb'"
+                />
+              </div>
+
+              <div style="margin-bottom: 24px">
+                <label
+                  style="
+                    display: block;
+                    font-weight: 500;
+                    color: #374151;
+                    margin-bottom: 8px;
+                  "
+                  >Assunto *</label
+                >
+                <select
+                  name="subject"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 16px;
+                    border: 2px solid #e5e7eb;
+                    border-radius: 12px;
+                    font-size: 16px;
+                    transition: all 0.3s ease;
+                  "
+                  onfocus="this.style.borderColor='#3b82f6'"
+                  onblur="this.style.borderColor='#e5e7eb'"
+                >
+                  <option value="">Selecione o assunto</option>
+                  <option value="Orçamento">Solicitar Orçamento</option>
+                  <option value="Agendamento">Agendar Serviço</option>
+                  <option value="Emergência">Emergência 24h</option>
+                  <option value="Dúvidas">Dúvidas Gerais</option>
+                  <option value="Reclamação">Reclamação</option>
+                  <option value="Elogio">Elogio</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 32px">
+                <label
+                  style="
+                    display: block;
+                    font-weight: 500;
+                    color: #374151;
+                    margin-bottom: 8px;
+                  "
+                  >Mensagem *</label
+                >
+                <textarea
+                  name="message"
+                  required
+                  rows="6"
+                  style="
+                    width: 100%;
+                    padding: 16px;
+                    border: 2px solid #e5e7eb;
+                    border-radius: 12px;
+                    font-size: 16px;
+                    transition: all 0.3s ease;
+                    resize: vertical;
+                  "
+                  placeholder="Descreva sua necessidade ou dúvida..."
+                  onfocus="this.style.borderColor='#3b82f6'"
+                  onblur="this.style.borderColor='#e5e7eb'"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-primary"
+                style="
+                  width: 100%;
+                  justify-content: center;
+                  font-size: 18px;
+                  padding: 20px;
+                "
+              >
+                <span>📤</span>
+                <span>Enviar Mensagem</span>
+              </button>
+
+              <p
+                style="
+                  text-align: center;
+                  color: #6b7280;
+                  font-size: 14px;
+                  margin-top: 16px;
+                "
+              >
+                * Você será redirecionado para o WhatsApp com sua mensagem
+              </p>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div style="display: flex; flex-direction: column; gap: 32px">
+            <!-- WhatsApp -->
+            <div
+              style="
+                background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+                border-radius: 24px;
+                padding: 32px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 16px;
+                  margin-bottom: 24px;
+                "
+              >
+                <div
+                  style="
+                    background: linear-gradient(135deg, #16a34a, #15803d);
+                    color: white;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 24px;
+                  "
+                >
+                  📱
+                </div>
+                <h3
+                  style="
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #166534;
+                    margin: 0;
+                  "
+                >
+                  WhatsApp 24h
+                </h3>
+              </div>
+              <p style="color: #166534; margin-bottom: 20px">
+                Nossa forma preferida de atendimento. Resposta rápida e
+                atendimento personalizado.
+              </p>
+              <a
+                href="https://wa.me/5527992472266?text=Olá! Gostaria de falar com vocês."
+                target="_blank"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 12px;
+                  background: linear-gradient(135deg, #16a34a, #15803d);
+                  color: white;
+                  padding: 16px;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  transition: all 0.3s ease;
+                  font-size: 18px;
+                "
+              >
+                <span>📞</span>
+                <span>(27) 99247-2266</span>
+              </a>
+            </div>
+
+            <!-- Emergency -->
+            <div
+              style="
+                background: linear-gradient(135deg, #fef2f2, #fee2e2);
+                border: 2px solid #fecaca;
+                border-radius: 24px;
+                padding: 32px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 16px;
+                  margin-bottom: 24px;
+                "
+              >
+                <div
+                  style="
+                    background: linear-gradient(135deg, #ef4444, #dc2626);
+                    color: white;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 24px;
+                  "
+                >
+                  🚨
+                </div>
+                <h3
+                  style="
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #dc2626;
+                    margin: 0;
+                  "
+                >
+                  Emergências 24h
+                </h3>
+              </div>
+              <p style="color: #dc2626; margin-bottom: 20px">
+                Para emergências elétricas ou outros problemas urgentes,
+                atendemos 24 horas!
+              </p>
+              <a
+                href="https://wa.me/5527992472266?text=🚨 EMERGÊNCIA! Preciso de atendimento urgente!"
+                target="_blank"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 12px;
+                  background: linear-gradient(135deg, #ef4444, #dc2626);
+                  color: white;
+                  padding: 16px;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  transition: all 0.3s ease;
+                  font-size: 18px;
+                "
+              >
+                <span>🚨</span>
+                <span>Emergência Agora</span>
+              </a>
+            </div>
+
+            <!-- Other Contacts -->
+            <div
+              style="
+                background: white;
+                border-radius: 24px;
+                padding: 32px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+              "
+            >
+              <h3
+                style="
+                  font-size: 20px;
+                  font-weight: 700;
+                  color: #1f2937;
+                  margin-bottom: 24px;
+                "
+              >
+                Outras Formas de Contato
+              </h3>
+
+              <div style="display: flex; flex-direction: column; gap: 20px">
+                <div style="display: flex; align-items: center; gap: 16px">
+                  <div
+                    style="
+                      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+                      color: white;
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 10px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 18px;
+                    "
+                  >
+                    📧
+                  </div>
+                  <div>
+                    <div style="font-weight: 600; color: #1f2937">E-mail</div>
+                    <div style="color: #6b7280; font-size: 14px">
+                      contato@casolucoes.com
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 16px">
+                  <div
+                    style="
+                      background: linear-gradient(135deg, #f59e0b, #d97706);
+                      color: white;
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 10px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 18px;
+                    "
+                  >
+                    📍
+                  </div>
+                  <div>
+                    <div style="font-weight: 600; color: #1f2937">
+                      Localização
+                    </div>
+                    <div style="color: #6b7280; font-size: 14px">
+                      Vila Velha, ES - Região Metropolitana
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 16px">
+                  <div
+                    style="
+                      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+                      color: white;
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 10px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 18px;
+                    "
+                  >
+                    🕐
+                  </div>
+                  <div>
+                    <div style="font-weight: 600; color: #1f2937">
+                      Horário de Atendimento
+                    </div>
+                    <div style="color: #6b7280; font-size: 14px">
+                      Seg-Sex: 7h-18h | Sáb: 7h-12h
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div
+              style="
+                background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+                border-radius: 24px;
+                padding: 32px;
+              "
+            >
+              <h3
+                style="
+                  font-size: 20px;
+                  font-weight: 700;
+                  color: #1f2937;
+                  margin-bottom: 24px;
+                "
+              >
+                Redes Sociais
+              </h3>
+              <div style="display: flex; gap: 16px">
+                <a
+                  href="https://www.instagram.com/ca.solucao/"
+                  target="_blank"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      #e1306c,
+                      #fd1d1d,
+                      #fcb045
+                    );
+                    color: white;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                  "
+                >
+                  📷
+                </a>
+                <a
+                  href="#"
+                  style="
+                    background: linear-gradient(135deg, #1877f2, #42a5f5);
+                    color: white;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                  "
+                >
+                  📘
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="why-choose">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nossa Área de Atendimento</h2>
+          <p>Atendemos toda a região metropolitana de Vitória</p>
+        </div>
+
+        <div
+          style="
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 48px;
+          "
+        >
+          <div style="border-radius: 16px; overflow: hidden; height: 400px">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60014.89!2d-40.3370!3d-20.3155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDE4JzU1LjgiUyA0MMKwMjAnMTMuMiJX!5e0!3m2!1spt-BR!2sbr!4v1640000000000!5m2!1spt-BR!2sbr"
+              style="border: 0; width: 100%; height: 100%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon blue">🏙️</div>
+            <h3>Vitória</h3>
+            <p>
+              Centro, Praia do Canto, Jardim Camburi, Jardim da Penha e todos os
+              bairros da capital.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon green">🏘️</div>
+            <h3>Vila Velha</h3>
+            <p>
+              Praia da Costa, Itapoã, Centro, Glória e demais bairros de Vila
+              Velha.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon yellow">🌳</div>
+            <h3>Serra</h3>
+            <p>
+              Laranjeiras, Colina de Laranjeiras, Jardim Limoeiro, Centro e
+              região.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon purple">🏞️</div>
+            <h3>Cariacica</h3>
+            <p>Campo Grande, Porto de Santana, Itacibá e demais localidades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float" id="whatsappFloat">
+      <div class="quick-messages" id="quickMessages">
+        <div class="quick-messages-content">
+          <div class="quick-messages-header">
+            <div class="status-dot"></div>
+            <h3>Como podemos ajudar?</h3>
+            <button onclick="toggleQuickMessages()" class="close-btn">✕</button>
+          </div>
+          <div class="quick-messages-list">
+            <a
+              href="https://wa.me/5527992472266?text=Olá! Gostaria de falar com vocês"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">👋</span>
+              <span>Quero falar com vocês</span>
+            </a>
+            <a
+              href="https://wa.me/5527992472266?text=Gostaria de um orçamento"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">💰</span>
+              <span>Solicitar orçamento</span>
+            </a>
+            <a
+              href="https://wa.me/5527992472266?text=Tenho um problema elétrico urgente"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">🚨</span>
+              <span>Emergência elétrica</span>
+            </a>
+            <a
+              href="https://wa.me/5527992472266?text=Gostaria de agendar um serviço"
+              target="_blank"
+              class="quick-message"
+            >
+              <span class="emoji">📅</span>
+              <span>Agendar serviço</span>
+            </a>
+          </div>
+          <div class="quick-messages-footer">
+            <span class="icon">📞</span>
+            <span>Resposta em até 5 minutos</span>
+          </div>
+        </div>
+      </div>
+      <button class="whatsapp-btn" onclick="toggleQuickMessages()">
+        <span class="pulse-ring"></span>
+        <span class="whatsapp-icon" id="whatsappIcon">💬</span>
+        <div class="notification-badge">⚡</div>
+        <div class="tooltip">Fale conosco agora!</div>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section company">
+            <div class="footer-logo">
+              <img src="./public/ca.jpg" alt="CA Soluções" />
+              <div>
+                <h3>CA Soluções</h3>
+                <p>⚡ Especialistas em Elétrica</p>
+              </div>
+            </div>
+            <p class="company-description">
+              Sua solução completa para <strong>elétrica residencial</strong>.
+              Instalação completa, mapeamento, reparos e desentupimentos com
+              <span class="highlight">garantia por escrito</span> e preço justo.
+            </p>
+            <div class="company-features">
+              <div class="feature-item">
+                <span class="icon">🛡️</span>
+                <span>Garantia por Escrito</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">🕐</span>
+                <span>Atendimento 24h</span>
+              </div>
+              <div class="feature-item">
+                <span class="icon">⚡</span>
+                <span>200+ Clientes</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/ca.solucao/"
+                target="_blank"
+                class="social-link instagram"
+                >📷</a
+              >
+              <a href="#" class="social-link facebook">📘</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="agenda.html">Agenda</a></li>
+              <li><a href="orcamento.html">Orçamento</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="sobre.html">Sobre Nós</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <div class="contact-info">
+              <a
+                href="https://wa.me/5527992472266"
+                target="_blank"
+                class="contact-item whatsapp"
+              >
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-title">(27) 99247-2266</div>
+                  <div class="contact-subtitle">WhatsApp 24h</div>
+                </div>
+              </a>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <div class="contact-title">contato@casolucoes.com</div>
+                  <div class="contact-subtitle">E-mail profissional</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-title">Vila Velha, ES</div>
+                  <div class="contact-subtitle">Região Metropolitana</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 CA Soluções - Especialistas em Elétrica. Todos os direitos
+            reservados.
+          </p>
+          <div class="footer-credits">
+            <span>Desenvolvido com ⚡ por CA Soluções</span>
+            <span>•</span>
+            <span>Vila Velha, ES</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function submitContactForm(event) {
+        event.preventDefault()
+
+        const form = event.target
+        const formData = new FormData(form)
+
+        const whatsappMessage = `📞 *CONTATO PELO SITE*
+
+👤 *Nome:* ${formData.get("name")}
+📱 *WhatsApp:* ${formData.get("phone")}
+📧 *E-mail:* ${formData.get("email") || "Não informado"}
+
+📋 *Assunto:* ${formData.get("subject")}
+
+💬 *Mensagem:*
+${formData.get("message")}
+
+Aguardo retorno! 🙏`
+
+        window.open(
+          `https://wa.me/5527992472266?text=${encodeURIComponent(
+            whatsappMessage
+          )}`,
+          "_blank"
+        )
+
+        return false
+      }
+    </script>
+  </body>
+</html>
